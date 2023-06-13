@@ -1,8 +1,3 @@
-# Luke's build of st - the simple (suckless) terminal
-
-The [suckless terminal (st)](https://st.suckless.org/) with some additional
-features that make it literally the best terminal emulator ever:
-
 ## Unique features (using dmenu)
 
 + **follow urls** by pressing `alt-l`
@@ -39,24 +34,10 @@ features that make it literally the best terminal emulator ever:
 You should have xlib header files and libharfbuzz build files installed.
 
 ```
-git clone https://github.com/LukeSmithxyz/st
+git clone https://github.com/knownblackhat/st
 cd st
 sudo make install
 ```
-
-Note that [scroll](https://github.com/lukesmithxyz/scroll) is automatically
-pulled and installed when you make this build of st.
-
-Obviously, `make` is required to build. `fontconfig` is required for the
-default build, since it asks `fontconfig` for your system monospace font.  It
-might be obvious, but `libX11` and `libXft` are required as well. Chances are,
-you have all of this installed already.
-
-On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the
-`$LIBS` before compiling.
-
-Be sure to have a composite manager (`xcompmgr`, `picom`, etc.) running if you
-want transparency.
 
 ## How to configure dynamically with Xresources
 
@@ -95,8 +76,3 @@ Note that some special characters may appear truncated if too wide. You might
 want to manually set your prefered emoji/special character font to a lower size
 in the `config.h` file to avoid this. By default, JoyPixels is used at a
 smaller size than the usual text.
-
-## Contact
-
-- Luke Smith <luke@lukesmith.xyz>
-- [https://lukesmith.xyz](https://lukesmith.xyz)
